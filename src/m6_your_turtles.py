@@ -39,16 +39,18 @@ bob.pen = rg.Pen('black' , 1)
 jack.speed = 10
 john.speed = 10
 bob.speed = 10
-window.tracer(5)
+window.tracer(2)
 for k in range(200):
-    jack.draw_regular_polygon(3, k)  # triangle
+    jack.draw_regular_polygon(3, k)
+    jack.forward(50)
+    jack.left(60)
+john.go_to(rg.Point(0, 0))
+for k in range (100):
 
-for k in range (100):
-    john.go_to(rg.Point(0, 0))
-    john.pen_down()
+    john.forward(100)
     john.draw_circle(k)
-    john.pen_up()
-for k in range (100):
+    john.left(90)
+for k in range (400):
     bob.forward(k)
     bob.right(95)
 
